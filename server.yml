@@ -81,8 +81,8 @@
 #   If you are running ntfy with systemd, make sure this user database file is owned by the
 #   ntfy user and group by running: chown ntfy.ntfy <filename>.
 #
-# auth-file: <filename>
-# auth-default-access: "read-write"
+auth-file: "/var/cache/ntfy/user.db"
+auth-default-access: "deny-all"
 
 # If set, the X-Forwarded-For header is used to determine the visitor IP address
 # instead of the remote address of the connection.
@@ -100,10 +100,10 @@
 # - attachment-file-size-limit is the per-file attachment size limit (e.g. 300k, 2M, 100M)
 # - attachment-expiry-duration is the duration after which uploaded attachments will be deleted (e.g. 3h, 20h)
 #
-# attachment-cache-dir:
-# attachment-total-size-limit: "5G"
-# attachment-file-size-limit: "15M"
-# attachment-expiry-duration: "3h"
+attachment-cache-dir: "/var/cache/ntfy/attachments"
+attachment-total-size-limit: "50G"
+attachment-file-size-limit: "15M"
+attachment-expiry-duration: "720h"
 
 # If enabled, allow outgoing e-mail notifications via the 'X-Email' header. If this header is set,
 # messages will additionally be sent out as e-mail using an external SMTP server. As of today, only
@@ -191,8 +191,8 @@
 # - visitor-attachment-total-size-limit is the total storage limit used for attachments per visitor
 # - visitor-attachment-daily-bandwidth-limit is the total daily attachment download/upload traffic limit per visitor
 #
-# visitor-attachment-total-size-limit: "100M"
-# visitor-attachment-daily-bandwidth-limit: "500M"
+visitor-attachment-total-size-limit: "100M"
+visitor-attachment-daily-bandwidth-limit: "500M"
 
 # Log level, can be TRACE, DEBUG, INFO, WARN or ERROR
 # This option can be hot-reloaded by calling "kill -HUP $pid" or "systemctl reload ntfy".
