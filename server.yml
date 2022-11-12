@@ -11,7 +11,7 @@
 # - iOS push notifications for self-hosted servers (to calculate the Firebase poll_request topic)
 # - Matrix Push Gateway (to validate that the pushkey is correct)
 #
-# base-url:
+base-url: http://cs.linuxuniverse.com.br:9090
 
 # Listen address for the HTTP & HTTPS web server. If "listen-https" is set, you must also
 # set "key-file" and "cert-file". Format: [<ip>]:<port>, e.g. "1.2.3.4:8080".
@@ -103,7 +103,7 @@ auth-default-access: "deny-all"
 attachment-cache-dir: "/var/cache/ntfy/attachments"
 attachment-total-size-limit: "50G"
 attachment-file-size-limit: "15M"
-attachment-expiry-duration: "720h"
+attachment-expiry-duration: "360h"
 
 # If enabled, allow outgoing e-mail notifications via the 'X-Email' header. If this header is set,
 # messages will additionally be sent out as e-mail using an external SMTP server. As of today, only
