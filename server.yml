@@ -160,7 +160,7 @@ attachment-expiry-duration: "360h"
 # the message ID of the original message, instructing the iOS app to poll this server for the actual message contents.
 # This is to prevent the upstream server and Firebase/APNS from being able to read the message.
 #
-upstream-base-url: "http://cs.linuxuniverse.com.br:9090"
+upstream-base-url: "https://ntfy.sh"
 
 # Rate limiting: Total number of topics before the server rejects new topics.
 #
